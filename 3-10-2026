@@ -1,0 +1,35 @@
+#Leetcode Daily Problem  - 3/10/2026
+#Difficulty - Hard
+#Longest Valid Parenthesis
+  #Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
+
+
+  class Solution:
+    def longestValidParentheses(self, s: str) -> int:
+        result=0
+        opening=closing=0
+        for ch in s:
+            if ch == '(':
+                opening+=1
+            else:
+                closing+=1
+            if opening==closing:
+                result=max(result,2*closing)
+            elif closing>opening:
+                opening=closing=0
+        opening=closing=0
+        for ch in reversed(s):
+            if ch=='(':
+                opening+=1
+            else:
+                closing+=1
+            if opening==closing:
+                result=max(result,2*opening)
+            elif closing<opening:
+                opening=closing=0
+        return result
+
+            
+
+
+        
