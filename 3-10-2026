@@ -1,7 +1,7 @@
-#Leetcode Daily Problem  - 3/10/2026
-#Difficulty - Hard
-#Longest Valid Parenthesis
-  #Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
+Leetcode Daily Problem  - 3/10/2026
+Difficulty - Hard
+Longest Valid Parenthesis
+Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
 
 
   class Solution:
