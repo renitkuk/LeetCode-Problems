@@ -1,0 +1,17 @@
+3. Longest Substring Without Repeating Characters
+Given a string s, find the length of the longest substring without duplicate characters.
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        start = 0
+        max_length = 0
+        used_chars = {}
+
+        for i in range(len(s)):
+            if s[i] in used_chars and used_chars[s[i]] >= start:
+                start = used_chars[s[i]] + 1
+            used_chars[s[i]] = i
+            max_length = max(max_length, i - start + 1)
+
+        return max_length
+        
